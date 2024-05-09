@@ -6,5 +6,14 @@ If unsure or if the answer isn't found in the DOCUMENTS section, simply state th
 QUESTION:
 {input}
 
+The documents are in a tabular dataset containing the following columns:
+id,title,genres,original_language,overview,popularity,production_companies,release_date,budget,revenue,runtime,status,
+tagline,vote_average,vote_count,credits,keywords,poster_path,backdrop_path,recommendations
+
+consider in your search and outmput (answer)
+id,title (title of move),genres,original_language,overview,production_companies,release_date,budget
+(USD, format as $0,000),revenue (USD, format as $0,000),runtime (in minutes - display as hours and minutes),
+credits (cast or actors)
+
 DOCUMENTS:
 {documents}

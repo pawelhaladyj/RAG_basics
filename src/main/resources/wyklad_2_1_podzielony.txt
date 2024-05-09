@@ -1,0 +1,222 @@
+Dzień dobry państwu Witam państwa na kolejnej części wykładu z podstaw teorii grafów poprzednią część zakończyliśmy na zagadnieniu
+spójności grafów to tak dla przypomnienia możemy tak ogólnie powiedzieć że graf jest spójny jeżeli jest po prostu w jednym kawałku
+na rysunku na płaszczyźnie bardziej tak formalnie możemy powiedzieć że graf jest spójny jeżeli każdy wierzchołek jest osiągalny z
+każdego innego wierzchołka czyli istnieje droga w tym grafie która łączy dany wierzchołek w każdym innym wierzchołkiem i teraz mówiliśmy
+też o takich dwóch operacjach które możemy wykonywać na grafach jako że graf składa się z dwóch zbiorów ze zbioru wierzchołków i
+zbioru krawędzi gdzie zbiór krawędzi jest zbiorem dwuelementowych podzbiorów zbiorów wierzchołków to możemy wykonywać takie operacje
+jak sumowanie grafów czy też usuwanie z grafów krawędzi usuwanie z grafów wierzchołków i tak dla przypomnienia Załóżmy że mamy pewien
+gra w g o zbiorze wierzchołków v i zbiorze krawędzi e i usunięcie z tego grafu pewnego wierzchołka małe V ze zbioru wierzchołków
+polega na tym że tworzymy nowy graf powiedzmy gra w h który ma zbiór wierzchołków równy zbiór wierzchołków grafu g z wyłączeniem
+tego wybranego wierzchołka V oraz z krawędziami e od h które tworzymy w taki sposób że jako elementy składowe wierzchołki które są
+różne od tego wybranego wierzchołka V czyli inaczej mówiąc jeżeli usuwają państwo z grafu wierzchołek to trzeba wymazać ten wierzchołek
+i wszystkie krawędzie które są incydentne do tego wierzchołka druga operacja to jest usuwanie z grafu krawędzi Powiedzmy że usuwamy
+pewną wybraną krawędź r i to jest sytuacja prostsza dlatego że tutaj działamy tylko na zbiorze krawędzi zbiór wierzchołków tego nowego
+grafu jest identyczny jak zbiór wierzchołków grafug natomiast zbiór krawędzi to jest zbiór krawędzi grafug z wyłączeniem tej jednej
+wybranej krawędzi czyli usuwając krawędź z grafu po prostu wymazujemy daną krawędź tyle i teraz tutaj takie kolejne zagadnienie które
+się pojawia to jest rozspólnienie grafu a dokładniej pytanie o jego spójność krawędziową i spójność wierzchołkową czyli będziemy
+pytać o to Ile minimalnie należy usunąć z grafu wierzchołków bądź krawędzi aby z grafu spójnego zrobić graf niespójny więc tutaj
+mamy definicję W sumie tutaj w tej definicji są tak naprawdę dwa elementy najmniejszą liczbę usuniętych wierzchołków powodujących
+rozspólnienie grafu nazywamy spójnością wierzchołkową grafu i często oznacza się tą spójność wierzchołkową symbolem Kappa od g najmniejsza
+liczba wierzchołków które należy usunąć aby rozspunić dane grafy I analogicznie możemy zdefiniować spójność krawędziową grafu będzie
+to najmniejsza liczba krawędzi które należy z takiego grafu usunąć aby go rozspólić i spójność krawędziową oznacza się symbolem lambda
+od g i tutaj mamy kilka przykładów najpierw graf 1 tak jeszcze dla przypomnienia jeżeli chodzi o taką podstawową klasyfikację będzie
+to graf spójny czyli bez krawędzi wielokrotnych i bez pętli oraz graf Nie skierowany Czyli możemy się poruszać po krawędziach w jedną
+i w drugą stronę sam jako całość składa się z jednego kawałku każdy wierzchołek jest osiągalny z każdego innego wierzchołka Czyli
+z każdego wierzchołka możemy sobie po krawędziach przejść do każdego innego wierzchołka No i chcemy pytamy o to Ile minimalnie należy
+usunąć wierzchołków aby ta struktura się rozpłyniła to proszę zobaczyć że jeżeli usunęlibyśmy któryś z tych wierzchołków takich krańcowych
+które są stopnie 1 to usuwamy oczywiście wierzchołek ale łącznie z krawędzią która jest incydentna to akurat będzie po jednej i biorąc
+którykolwiek z nich i usuwając No graf nadal jest spójny to mam jeszcze tutaj takie trzy w środku w cyklu C3 i proszę zobaczyć że
+gdybyśmy na przykład usunęli ten razem z tymi trzema krawędziami incydentnymi to graf się wtedy rozspójni na dole zostanie ten graf
+liniowy a na górze gra w pusty n1 tutaj będziemy mieli wierzchołek izolowany czyli tutaj spójność wierzchołkowa Kappa od G1 to jest
+1 podobno własność jak ten wierzchołek mają te dwa pozostałe z cyklu Oczywiście gdyby się okazało że nie da się tak zrobić że usunięcie
+jednego spowoduje rozpłynienie grafu i byśmy sprawdzili wszystkie opcje to wtedy trzeba szukać par bus Czy jest taka para wierzchołków
+których usunięcie spowoduje rozpłynienie potem trójek i tak dalej no i jeszcze spójność krawędziowa to jeżeli usuniemy jedną z tych
+krawędzi takich zewnętrznych Nazwijmy to czy graw się rozspólnie usuwanie krawędzi wymazujemy krawędź to proszę zobaczyć biorąc tę
+krawędź i wymazując ją uzyskujemy tutaj tą część która jest na dole plus ten graf pusty n1 wierzchołek izolowany Czyli też graf się
+rozpłynie no i podobno własność mają te dwie krawędzie na dole czyli lambda od G1 To jest jedynka drugi przykład gra w G2 to jest
+graf to jest C6 czyli graf spójny regularny stopnia 2 i to samo zagadnienie on jako całość oczywiście jest spójny własność Czy usunięcie
+jednego wierzchołka rozpólnia graf nieważne na który popatrzymy usunięcie tylko jednego nic nam nie da Czy usunięcie dwóch rozkmini
+graf rozbójni ale musimy wziąć wierzchołki które nie są ze sobą sąsiednie na przykład mogę wziąć ten wierzchołek Wymazać go wraz
+z krawędziami incydentnymi ten wierzchołek który powiedzmy przekątną jakąś tworzy z nim usunąć i wtedy nam powstanie tutaj ten graf
+liniowy z lewej strony i wierzchołek izolowany z prawej czyli gracz się rozspólnie a więc Kappa od G2 to jest 2 to to oczywiście
+pomyłka to powinno być to proszę sobie poprawić przy przepisywanie nie trzy tylko dwa wystarczy usunąć dwa wierzchołki aby grać się
+rozspólnie i to samo Jeżeli chodzi o krawędzie wystarczył dwie krawędzie Tylko znowu nie mogą być one przecież tutaj akurat nie mogą
+być Sąsiady bo jeżeli usuniemy te dwie krawędzie sąsiednie to nam powstanie tutaj graf liniowy i graf pusty więc lambda od G2 to
+też jest 2 tutaj przypominam przepisując sobie proszę poprawić te dwie trójki na dwójki trzeci rysunek graf G3 to wszystko to jest
+gra w G3 No to tutaj ten graf nie jest grafem spójnym już na początku bo ma dwie spójne składowe Więc jego spójność wierzchołkowa
+Kappa i krawędziowa lambda to są zera to nie musimy nic zrobić aby go rozpłynąć patrząc o te trzy przykłady możemy wyciągnąć pewien
+pochopny wniosek że akurat w tych trzech przykładach tak wyszło natomiast to nie jest generalna zasada nie ma czegoś takiego i tutaj
+proszę popatrzeć na kolejny przykład gra w G4 jego spójność krawędziowa Kappa to jest 1 tutaj taką własność rozspojniającą na ten
+wierzchołek stopnia cztery w środku jak go usuniemy to będziemy mieli dwa grafy liniowe z lewej z prawej strony czyli Kappa od G4
+to 1 natomiast nie da się usunąć jednej krawędzi pojedynczej krawędzi aby taki graf rozfunić trzeba zrobić trzeba usunąć chociaż
+dwie na przykład możemy wziąć o te dwie tutaj sąsiednie wtedy nam powstaje ten wierzchołek izolowany i reszta tutaj z lewej strony
+czyli lambda od G4 to 2 i ogólnym przypadku spójność krawędziowa nie jest równa spójności wierzchołkowej ale są takie sytuacje czy
+takie klasy grafów gdzie te dwie wielkości będą takie same i to tyle Proszę państwa Jeżeli chodzi o uzupełnienie tematu spójność
+idziemy dalej kolejny temat to będą grafy o ile rowskie graf spójny g nazywamy grafem oilerowskim jeśli istnieje zamknięta ścieżka
+zawierająca każdą krawędź grafugie i taką ścieżkę nazywa się cyklem bojlera możemy zauważyć że ta definicja króciutka prosta wymaga
+aby taki cykl Eulera przechodził przez każdą krawędź dokładnie jeden raz czyli graf oilerowski jest to graf który zawiera tak zwany
+cykl Eulera czyli cykl który zawiera każdą krawędź grafu i każda krawędź grafu jest wykorzystana tylko jeden raz praw który nie jest
+jako całość grafem eulerowskim nazwiemy grafem pół eulerowskim jeśli istnieje ścieżka zawierająca każdą krawędź grafug nie musi być
+Jaka jest różnica to wcześniej było że ma być zamknięta ścieżka czyli cykl a tutaj po prostu ścieżka oczywiście w przypadku zamkniętej
+ścieżki zasada jest taka że wierzchołek startowy z którego wychodzimy ma być też wierzchołkiem końcowym i teraz mają państwo tutaj
+trzy przykłady grafów jest napisane jakie one są graf z lewej strony jest grafen bojlerowskim czyli zawiera taką taki cykl spoilera
+graf na rysunku środkowym jest pół eulerowski Czyli nie ma cyklu Eulera ale posiada ścieżkę która zawiera każdą krawędź i trzeci
+graf nie jest ani taki ani taki nie da się znaleźć ani cyklu Eulera ani tej ścieżki przechodzącej przez każdą krawędź to są bardzo
+bardzo proste struktury Naprawdę można sobie wybrać pewien wierzchołek i próbować sobie przechodzić przez krawędzie tego grafu w
+taki sposób aby wykorzystać każdą krawędź dokładnie jeden raz oczywiście wierzchołki mogą się powtarzać możemy dany wierzchołek wykorzystywać
+kilka razy to jest zasada tylko do krawędzi natomiast generalnie problem ten aby sobie wyznaczyć taki cykl oilera nawet przy takich
+już nieskomplikowanych strukturach jak na rysunku 6.1 może być problematyczny jest takie narzędzie o którym będzie mowa za chwilę
+twierdzenie Eulera które daje nam warunek konieczny i dostateczny na to aby graf posiadał cykl Eulera bardzo proste twierdzenie bardzo
+prosty warunek do sprawdzenia jeżeli graf będzie spełniał w tym twierdzeniu no to na pewno taki cykl da się znaleźć jest też oczywiście
+sposób aby taki cykl wyznaczyć taki algorytm o którym też będziemy za chwilę mówić Skąd wziął się sam problem zadania dotyczące grafów
+oilerowskich często występują w książkach z rozrywkami łamigłówkami matematycznymi takie zadanie może polegać na tym by narysować
+daną figurę bez odrywania ołówka od papieru i bez rysowania tej samej linii wiele razy natomiast sama nazwa eulerowskiej wywodzi
+się stąd że ojner był pierwszym który rozwiązał taki słynny problem Mostów królewieckich pytanie które postawiono brzmiało Czy można
+przejść dokładnie i jeden raz przez każdy z siedmiu osób tutaj mamy Sromowce tą sytuację pokazaną na rysunku 64 Czy możemy przejść
+przez każdy z sieci gruntów i to pytanie możemy przerobić na język grafów tą sytuację zobrazować jako graf i postawić pytanie czy
+w tym grafie istnieje cyk bojlera tutaj proszę państwa mamy te 7 Mostów i mamy pewne części lądu które są przedzielone i one tutaj
+mamy cztery te części one są nazywane a b c d i teraz ta sytuacja jest przerobiona na Graf w taki sposób że każdy ten fragment lądu
+jest wierzchołkiem mamy ich 4 tak jak tutaj na rysunku a b c d natomiast każdy most jest krawędzią która łączy daną część lądu z
+daną częścią lądu możemy zauważyć że pomiędzy tą częścią a i c są dwa mosty Stąd mamy krawędź dwukrotną pomiędzy wierzchołkiem AC
+pomiędzy częścią a i b Podobnie jest są dwa mosty więc mamy krawędź dwukrotną i jeszcze ta część d Proszę zobaczyć ona jest połączona
+z każdą z tych części SC i z D1 izbę Przepraszam jednym mostem Czy ty mamy te trzy krawędzie czyli graf z prawej strony to jest przedstawia
+tą sytuację z mostami No i teraz pytanie czy da się tutaj znaleźć taki cykl Eulera pytanie które nasuwa się natychmiast brzmi czy
+możliwa jest to znalezienie warunku Koniecznego i dostatecznego na to wydany grab był bojlerowski proszę państwa na początku lama
+taki wprowadzający tutaj ten element jest przedstawiony z dowodem natomiast jakby to państwa nie obowiązuje ja go też tutaj nie będę
+omawiać Jeżeli ktoś chce to może sobie na tym fragmencie oczywiście zatrzymać i sobie przeanalizować ten dowód sam lemat brzmi na
+formę implikacji i brzmi następująco jeśli w grafie g każdy wierzchołek ma stopień równy co najmniej dwa to gra w g zawiera cykl
+jeżeli w grafie każdy wierzchołek ma stopień równy chociaż dwa To z tego wynika że w grafie mamy cykl i proszę państwa to co trzeba
+zapamiętać to treść tego twierdzenia twierdzenia Eulera w 1736 roku Tak jak mówiłem wcześniej ono daje nam warunek warunki konieczne
+i dostateczne na to aby graf posiadał taki cykl i tutaj mamy to twierdzenie wyrażone poprzez równoważność Stąd mamy warunek i konieczny
+i dostateczny graf spójny gier jest grafem oilerowskim wtedy i tylko wtedy gdy stopień każdego wierzchołka gra w g jest liczbą parzystą
+bardzo proste warunki do sprawdzenia tak naprawdę są dwa graf ma być spójny i każdy wierzchołek w grafie ma mieć stopień parzysty
+to teraz na chwilę się cofniemy do tych trzech początkowych rysunków wszystkie te trzy sytuacje spełniają założenie na temat spójności
+bujny natomiast na przykład ten wierzchołek ma 105 3 wartość nieparzystą to to już wystarczy twierdzenie Eulera nie jest spełnione
+na pewno nie ma tam cyklu bojlera i podobnie Na rysunku trzecim ten wierzchołek ma 105 3 przepraszam więc na pewno nie da się takiego
+cyklu wyznaczyć i teraz jeszcze Przechodzimy sobie tutaj do tego problemu z mostami graf jest spójny ale na przykład wierzchołek
+d ma stopień 3 ma stopień nieparzysty podobnie jak wierzchołek c ale wystarczy jeden taki wierzchołek twierdzenie Eulera nie jest
+spełnione w tym grafie na pewno nie ma cyklu Eulera czyli nie da się przejść przez wszystkie siedem mostów w taki sposób aby przez
+każde przejść tylko raz i wrócić do punktu startowego i też tutaj proszę państwa jest dowód tego twierdzenia on składa się z dwóch
+części dlatego że to jest implik równoważność czyli implikacja w obie strony trzeba wykazać że z jednej części wynika druga i z drugiej
+wynika ta pierwsza to też Ja od państwa tego nie wymagam i też nie będziemy tutaj się tym zajmować Natomiast jeżeli ktoś jest zainteresowany
+to można sobie tak jak wcześniej zatrzymać i sobie to przeczytać do państwa obowiązuje przede wszystkim definicja Co to jest get
+cykl spoilera czy to jest gra o ilerowski no i twierdzenie Eulera które pozwala właśnie na szybkie sprawdzenie czy da się taki cykl
+znaleźć czy nie tutaj mamy jeszcze dwa wnioski które płyną z tego twierdzenia pierwszy wniosek gra w spójny jest grafem oilerowskim
+wtedy i tylko wtedy gdy zbiór jego krawędzi można podzielić na rozłączne cykle gra w spójny jest oilowski wtedy tylko wtedy gdy zbiór
+krawędzi da się rozdzielić na rozłączne cykle i drugi wniosek na temat tej słabszej własności gra w spójny jest grafem pół eulerowskim
+gadaj tylko wtedy gdy ma dokładnie dwa wierzchołki nieparzystych stopni i to proszę zobaczyć że w obu tych wnioskach również jest
+użyte wtedy i tylko wtedy Czyli mamy warunki konieczne dostateczne i tutaj mamy Sposób Jak sprawdzić czy graf jest pół eulerowski
+wtedy i tylko wtedy gdy ma dokładnie dwa wierzchołki stopnia nieparzystego i Proszę Państwa Na zakończenie podamy sobie taką procedurę
+procedura która nam mówi jak taki cykl Eulera wyznaczyć taki algorytm florergo bardzo prosty nieskomplikowany który ma tak naprawdę
+dwie zasady a ja nie jestem wyrażony w postaci twierdzenia Załóżmy że gra w g jest grafem eulerowskim Czyli mamy już gra w który
+spełnia twierdzenie Eulera wtedy następująca konstrukcja jest wykonalna i daje w wyniku cykl Eulera w tym grafie zacznij cykl w dowolnym
+wierzchołku u i przechodź krawędzie w dowolnej kolejności Dbając jedynie o zachowanie następujących zasad po pierwsze usuwaj z grafu
+przechodzone krawędzie i wierzchołki izolowane powstający w wyniku usuwania tych krawędzi i druga zasada w każdym momencie przechodź
+przez most tylko wtedy gdy nie masz innej możliwości tutaj pojawia się takie zagadnienie jak most most to jest taka krawędź w grafie
+rzekę Usuniemy to grał się rozspójni podzieli na części czyli mamy taki graf który spełnia twierdzenie Eulera wybieramy dowolny wierzchołek
+i przechodzimy go przez kolejne krawędzie usuwając krawędzie przez które Przeszliśmy Natomiast jeżeli mamy kilka opcji do wyboru
+to wybieramy krawędź która nie jest mostem chyba że nie mamy wyjścia no to wtedy musimy przejść przez most Powiedzmy że jako graf
+dla którego szukamy cyklu Eulera mamy ten graf który tutaj jest z lewej strony narysowany który ma 6 wierzchołków one mają swoje
+nazwy 0 1 2 3 4 5 na początku aby w ogóle użyć ten algorytm sprawdźmy czy jest grafem eulerowskim czyli czy spełnia twierdzenie bojlera
+graf jest spójny jest w jednym kawałku każdy bardzo łatwo zauważyć że każdy wierzchołek ma stopień parzysty zero ma stopień dwa jedynka
+ma stopień cztery dwójka ma stopień 4 trójka ma stopień 2 czwórka 4 i 5 również 4 czyli taki cykl na pewno istnieje Ponieważ zgodnie
+z algorytmem wybieramy sobie jako Punkt startowy dowolny wierzchołek to wyznaczenie takiego cyklu to nie jest coś co jest w sposób
+jednoznaczny określony Czyli nie ma jednego takiego cyklu to wynika z tej dowolności wyboru wierzchołków i dowolności przechodzenia
+przez krawędzie Załóżmy że jako wierzchołek startowy wybieramy wierzchołek 0 i dopisujemy sobie go na listę zaczynamy od zera od
+zera mamy dwie opcje aby pójść dalej w kierunku wierzchołka 4 i w kierunku wierzchołka 5 żadna z tych krawędzi nie jest mostem więc
+wszystko jedno jak pójdziemy Załóżmy że idziemy do czwórki czyli od zera idę do czwórki furkę wpisuje jako kolejny odwiedzony wierzchołek
+a krawędź 0,4 jest usunięta bo tutaj jest ona na zielono ze strzałką aby było potem widać jak kolejno przechodziliśmy przez ten graf
+No i teraz jesteśmy wierzchołku cztery który w tym momencie ma trzy opcje na dalszą podróż bo już tej krawędzi do zera nie ma to
+jedynki do dwójki i do piątki wszystkie z tych krawę nie mosty więc wszystko jedno jak pójdziemy Powiedzmy że idziemy do jedynki
+czyli do listy wierzchołków dopisujemy jedynkę a krawędź 4,1 jest usunięta jesteśmy w Jedynce i tak samo patrzymy ile mamy opcji
+na dalszą podróż możemy pójść do dwójki do piątki do trójki żadna z tych krawędzi to nie jest most więc wszystko jedno Powiedzmy
+że idziemy do dwójki na prawo i tak jak wcześniej dwójka jest kolejnym wierzchołkiem na liście wierzchołków No i usuwamy krawędź
+12 i jesteśmy wierzchołku 2 który ma dalej trzy opcje albo pójdziemy do piątki albo do czwórki albo do trójki nadal nie mamy żadnego
+mostu jeszcze więc możemy sobie iść jak chcemy Powiedzmy że idziemy do wierzchołka 3 i wierzchołek 3 dopisuje jako kolejny do listy
+natomiast wierzchołka 3 mamy już tylko jedną opcję na dalszą podróż i proszę zobaczyć że ta krawędź 3:1 Ta Jedyna opcja to jest właśnie
+most bo jak ją usunę to ta trójka będzie grafem pustym n1 będziemy wierzchołek izolowany ale graw się rozpój ale ponieważ nie ma
+innej opcji bo nie ma więcej krawędzi od trójki to musimy przejść przez most Czyli idziemy do jedynki czyli jedynka kolejny odwiedzony
+wierzchołek Na liście z jedynki mamy dalszą podróż możliwie tylko na jeden sposób do piątki ta krawędź również jest mostem ale nie
+ma innej opcji to przechodzimy do piątki dopisujemy piątkę do listy jesteśmy w piątce z piątki mamy trzy opcje do zera do dwójki
+i do czwórki z tym że jedna z nich ta krawędź pięć zero to jest most a ponieważ są inne krawędzie które nie są mostami to nie możemy
+tej krawędzi wybrać Powiedzmy że idziemy do dwójki czyli dopisujemy wierzchołek 2 jako kolejny do listy i teraz z wierzchołka 2 to
+już nie ma innej opcji musimy pójść do czwórki przejść przez most czyli dopisuje czwórkę jako kolejny odwiedzony wierzchołek z czwórki
+mamy już tylko jedną opcję do piątki Czyli też musimy przejść przez most dopisujemy piątkę jako kolejny odwiedzony wierzchołek No
+i z piątki już jest tylko jedna opcja też przez most ale nie mamy innego wyjścia czyli idziemy do do zera No i na tym się algorytm
+stopuje wróciliśmy do początkowego wierzchołka i proszę zobaczyć że wykorzystaliśmy każdą krawędź dokładnie jeden raz a ten cykl
+który nam powstał jest tutaj opisany na liście wierzchołków czytając go tak od prawej strony możemy odtworzyć ten cykl oczywiście
+tak jak mówiłem nie jest to jedyne rozwiązanie nie jest to unikalny cykl Eulera dlatego że możemy sobie wybrać wierzchołka A potem
+wybierać krawędzie więc tutaj mogą moglibyśmy na wiele sposobów taki cykl stworzyć to tyle Proszę państwa Jeżeli chodzi o temat grafy
+oillerowskie to tak jeszcze dla przypomnienia proszę zapamiętać w kontekście egzaminu oczywiście Co to jest graf bojlera twierdzenie
+Eulera jak działa ten algorytm tutaj też proszę państwa To to wyświetla na chwilę też nie będziemy tego omawiać bo jest ten algorytm
+był podany w formie twierdzenia tutaj jest udowodnione że rzeczywiście on działa ale tak jak mówię ja tam dowodów od państwa nie
+wymagam proszę sobie jeżeli ktoś jest zainteresowany spróbować to przeanalizować od tej to wszystko mają państwo wyświetlone Kolejna
+rzecz to mamy takie stwierdzenie pewną własność dla grafu Załóżmy że graf g który składa się ze zbioru wierzchołków v i zbioru krawędzi
+e jest grafem prostym to wtedy zachodzi pewna relacja pomiędzy mocami wierzchołków w tym grafie a liczbą krawędzi w grafie mianowicie
+suma po wszystkich wierzchołkach w grafie stopni tych wierzchołków jest zawsze równa 2 razy moc zbioru m czyli 2 razy liczba krawędzi
+jak jeżeli wezmą jeżeli utworzą państwo ciąg wierzchołków dla danego grafu i dodamy wszystkie wyrazy tego ciągu to co nam wyjdzie
+po podzieleniu przez 2 będzie liczbą krawędzi w tym grafie albo jak mamy liczbę krawędzi pomnożymy przez 2 to to musi być to samo
+co suma wierzchołków i mamy jeszcze wniosek liczba wierzchołków o nieparzystym stopniu w grafie prostym jest parzysta Czyli jeżeli
+mamy graf prosty i patrzymy na wierzchołki o stopnie nieparzystym to jest ich parzyście wiele czyli 0 2 4 6 i tak dalej i tak dalej
+I teraz wykorzystując ten wniosek możemy rozwiązać pewne zadanie jest następujące Na przyjęciu spotkało się 51 osób Uzasadnij że
+wśród nich jest osoba która zna parzystą ilość osób jak to rozwiązać niech osoby z przyjęcia będą wierzchołkami graf Czyli mamy łącznie
+51 wierzchołków w dwie osoby znają się no to wtedy odpowiednie wierzchołki które reprezentują te osoby łączymy krawędzią No i szukamy
+wierzchołka o parzystym stopniu ponieważ w grafie jest nieparzysta liczba wierzchołków 51 a z tego wniosku wiemy że wierzchołków
+o nieparzystym stopniu jest parzyste wiele więc wierzchołków o parzystym stopniu jest nieparzyście wiele więc najmniejsza możliwa
+opcja Jaka może być to jest jedynka zatem na przyjęciu musi być przynajmniej jedna taka osoba bardzo łatwy sposób udało się to zadanie
+rozwiązać udowodnić wykorzystując wcześniej omówiony wniosek drugim takim typem grafów obok grafów bojlerowskich są grafy hamiltonowskie
+w poprzedniej części Punktem wyjścia było pytanie czy istnieje cykl który przechodzi przez wszystkie krawędzie danego grafu spójnego
+dokładnie jeden raz możemy podobne pytanie sformułować w kontekście wierzchołków i zapytać o to czy istnieje zamknięta ścieżka przechodząca
+dokładnie jeden raz przez każdy wierzchołek grafu g możemy zauważyć Oczywiście że taka ścieżka musi być cyklem z wyjątkiem przypadku
+kiedy gra w g był grafem byłby grafem pustym n1 i tego typu cykl który przechodzi przez każdy wierzchołek dokładnie jeden raz nazywa
+się cyklem Hamiltona a sam graf nazywa się grafem hamiltonowski grafy które nie są hamiltonowskie nazwiemy pół hamiltonowskimi jeśli
+istnieje droga przechodząca dokładnie jeden raz przez każdy wierzchołek czyli nie cykl ale po prostu droga tutaj mają państwo trzy
+rysunki od lewej strony idąc Gra w której jest hamiltonowski pół hamiltonowski i ani taki ani taki tutaj w jaki sposób wyznaczyć
+taki cykl bardzo łatwo bo Wystarczy wziąć na przykład startuje od tego wierzchołka idę do dołu po tej krawędzi do tego wierzchołka
+na prawo do góry na lewo wykorzystaliśmy wszystkie wierzchołki dokładnie jeden raz i mamy cykl nie wszystkie krawędzie zostały wykorzystane
+ale nie było tutaj takiej takiego warunku aby każda krawędź też była wykorzystana gra w środkowy Proszę zobaczyć że znajdzie się
+ścieżka która zawiera każdy wierzchołek mogę na przykład wybrać ten i sobie pójść na lewo do dołu i w prawo i wszystkie wierzchołki
+są wykorzystane ale nie da się tak zrobić że wrócimy do wierzchołka który wybraliśmy na początku nie przechodząc drugi raz przez
+wierzchołek wcześniej już odwiedzony więc to jest graf tylko pół hamiltonowski natomiast ten który jest tutaj jest żaden z nich dlatego
+że nie da się znaleźć ani cyklu ani ścieżki która zawierałaby każdy wierzchołek ale tylko jeden raz w przypadku grafów hamiltonowskich
+i pytania o cyk Hamiltona niestety nie ma takich odpowiedzi jak w przypadku cyklu Eulera Nie mamy takiego twierdzenia które by nam
+dawało warunek konieczny i dostateczny na to aby taki cykl na pewno istniał są pewne pewne warunki w postaci implikacji takie warunki
+wystarczające na to aby grał był hamiltonowski tutaj mamy warunek twierdzenie oraz 1960 roku Ono ma formę implikacji tak jak mówiłem
+Czyli to nie jest warunek konieczny i dostateczny jeżeli gra w prosty g ma n wierzchołków gdzie liczba wierzchołków to co najmniej
+trzy oraz dla każdej pary nie sąsiedniej wierzchołków czyli nie połączonych bezpośrednio krawędzią V suma ich stopni ma być co najmniej
+tyle ile liczba wierzchołków Jeżeli tak jest to graf jest hamiltonowski jeżeli jest to spełnione to graf jest hamiltonowski ale graf
+może być hamiltonowski a wcale tego warunku nie spełniać Czyli jeżeli jest to spełnione graf jest hamiltonowski A jeżeli nie jest
+to spełnione to może być a nie musi być popatrzmy sobie na ten rysunek tutaj pierwszy który był liczba wierzchołków to 4 czyli n
+jest równe 4 bierzemy Wszystkie pary nie sąsiedniej wierzchołków tutaj są tylko dwie takie pary stopień tego wierzchołka to 3 stopień
+tego wierzchołka to trzy plus trzy jest większe równe od 4 jeszcze druga para tutaj stopień to 2 tutaj stopień to 2 2 + 2 jest większe
+bądź równe od 4 czyli ten graf to spełnia To z tego wynika że ma taki cykl Hamiltona i tutaj mają państwo dowód tego twierdzenia
+również pozostawiam dla osób chętnych do przeczytania sobie jeżeli ktoś jest zainteresowany Kolejna rzecz która jest związana tymi
+warunkami dostatecznymi na istnienie takiego cyklu Hamiltona to jest wniosek autorstwa diraka 1952 jeżeli w grafie prostym g który
+ma n wierzchołków znowu zakładamy że m to jest co najmniej 3 dla każdego wierzchołka stopień wierzchołka jest większy równy od n
+przez 2 To z tego wynika że graf jest hamiltonowski Czyli jeżeli jest to spełnione to jest hamiltonowski ale jeżeli nie jest to może
+być Nie musi być Sprawdźmy jeszcze jak ten wniosek działa dla grafu z przykładowego tutaj liczba wierzchołków to 4 przez 2 to 2 i
+proszę zobaczyć że rzeczywiście stopień każdego z czterech wierzchołków jest większy bądź równy od 4/2 czyli 2 które mają formę implikacji
+trzeba pamiętać ich treść jeżeli pewne warunki są spełnione to wtedy taki cykl Hamiltona istnieje i zaczniemy sobie jeszcze kolejną
+rzecz mianowicie zagadnienie grafów izomorficznych to wiemy że dwa grafy G1 i G2 są izomorficzne jeśli istnieje wzajemnie jednoznaczna
+odpowiedniość między wierzchołkami grafu G1 i graf G2 taka że liczba krawędzi łączących dane dwa wierzchołki grafu G1 jest równa
+liczbie krawędzi łączących odpowiadające im wierzchołki grafu G2 i proszę państwa tutaj grafy izomorficzne to chodzi o to że są to
+takie struktury które mają identyczne relacje sąsiedztwa incydencji pomiędzy wierzchołkami krawędziami natomiast one są inaczej zaprezentowane
+inaczej są narysowane i na pierwszy rzut oka mogą się wydawać że są to różne struktury na przykład jeżeli popatrzył państwo na grafy
+z rysunku 2 3 Ten z lewej strony i z prawej strony to one na rysunkach na płaszczyźnie wyglądają kompletnie inaczej a tak przy okazji
+to są grafy co gram niedzielny k 33 natomiast tak jak mówię one mogą dawać mylne wrażenie że to są to inne Relacje pomiędzy wierzchołkami
+inne połączenia a tak naprawdę są identyczne Kiedy są identyczne kiedy istnieje funkcja bijekcja czyli funkcja różnowartościowa i
+na która przeprowadza jeden zbiór wierzchołków na drugi zbiór wierzchołków i ma taką własność że jeżeli tutaj Mieliśmy krawędź na
+przykład pomiędzy w i z to taka krawędź istnieje wtedy i tylko wtedy kiedy tutaj istnieje krawędź pomiędzy obrazami wierzchołka w
+i wierzchołka z i trzeba I temu się działać dla każdej krawędzi jeżeli pytamy o to czy grafy są izomorficzne to musimy na początku
+sprawdzić takie warunki wstępne niewystarczające ale konieczne grafy muszą mieć taką samą liczbę wierzchołków taką samą liczbę krawędzi
+oraz takie same ciągi stopni wierzchołków ale to nie wystarczy musimy jeszcze jeżeli te warunki konieczne są spełnione musimy jeszcze
+znaleźć tą obiekcje Czyli napisać jak Konkretnie przekształcane są wierzchołki na siebie Mamy taką obiekcje opisaną w tym miejscu
+działa w taki sposób że wierzchołek u przechodzi na wierzchołek L czyli l jest obrazem wierzchołka u w tym przekształceniu wierzchołek
+V przechodzi na m czyli V przechodzi na m wierzchołek w przechodzi na n wierzchołek x przechodzi na p wierzchołek y na q i wierzchołek
+z na R I to jest opis działania tej bijekcji teraz sprawdźmy czy to działa weźmy jako przykład krawędź ux w tym grafie z lewej strony
+istnieje taka krawędź więc musi też istnieć krawędź która łączy obrazy wierzchołków u i x obrazem wierzchołka u jest l x a jest p
+Czyli musi być krawędź LP No i proszę zobaczyć że tutaj jest Jeżeli weźmiemy v i z to jest taka krawędź tutaj vz to znaczy że tutaj
+musi być między obrazami tych wierzchołków obrazem wierzchołka V jest m wierzchołka z jest r Czyli musi być krawędź Mr wypiszę zobaczyć
+że jest taka krawędź i generalnie wszystkie krawędzie stąd mają swoje odpowiedniki stąd nie ma ani tutaj ani tutaj krawędzi która
+nie miałaby swojego odpowiednika Dobrze proszę państwa i to tyle jeżeli chodzi o część pierwszą tego wykładu i Dziękuję państwu za
+uwagę
