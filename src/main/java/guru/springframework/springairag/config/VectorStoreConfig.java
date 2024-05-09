@@ -16,16 +16,15 @@ import java.util.List;
 @Slf4j
 @Configuration
 public class VectorStoreConfig {
-
     @Bean
-    SimpleVectorStore simpleVectorStore(EmbeddingClient embeddingClient, VectorStoreProperties vectorStoreProperties){
-        var store = new SimpleVectorStore(embeddingClient);
+    SimpleVectorStore simpleVectorStore(EmbeddingClient embeddingClient, VectorStoreProperties vectorStoreProperties) {
+        var store =  new SimpleVectorStore(embeddingClient);
         File vectorStoreFile = new File(vectorStoreProperties.getVectorStorePath());
 
-        if(vectorStoreFile.exists()){
+        if (vectorStoreFile.exists()) {
             store.load(vectorStoreFile);
         } else {
-            log.debug("Loading documents into a vector store");
+            log.debug("Loading documents into vector store");
             vectorStoreProperties.getDocumentsToLoad().forEach(document -> {
                 log.debug("Loading document: " + document.getFilename());
                 TikaDocumentReader documentReader = new TikaDocumentReader(document);
@@ -33,7 +32,7 @@ public class VectorStoreConfig {
                 TextSplitter textSplitter = new TokenTextSplitter();
                 List<Document> splitDocs = textSplitter.apply(docs);
                 store.add(splitDocs);
-        });
+            });
 
             store.save(vectorStoreFile);
         }
